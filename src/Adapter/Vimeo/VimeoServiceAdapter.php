@@ -253,7 +253,6 @@ class VimeoServiceAdapter extends AbstractServiceAdapter
      */
     private function getVideoDataFromServiceApi($url, $thumbnail)
     {
-        $contents = file_get_contents('http://vimeo.com/api/v2/video/' . $this->getVideoId() . '.php');
         $contents = file_get_contents('https://vimeo.com/api/oembed.json?url=' . $url.'&thumbnail_width='.$thumbnail['thumbnail_width'].'&thumbnail_height='.$thumbnail['thumbnail_height']);
         if (false === $contents) {
             throw new ServiceApiNotAvailable('Vimeo Service Adapter could not reach Vimeo API Service. Check if your server has file_get_contents() function available.');
