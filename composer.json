@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Copadia\\": "src/"
+            "RicardoFiorani\\": "src/"
         }
     }
 }
