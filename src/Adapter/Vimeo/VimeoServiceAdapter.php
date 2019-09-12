@@ -47,7 +47,6 @@ class VimeoServiceAdapter extends AbstractServiceAdapter
     {
         $videoId = $this->getVideoIdByPattern($url, $pattern);
         $this->setVideoId($videoId);
-        $videoData = $this->getVideoDataFromServiceApi();
         $videoDataSmall = $this->getVideoDataFromServiceApi($url, self::THUMBNAIL[self::THUMBNAIL_SMALL]);
         $videoDataMedium = $this->getVideoDataFromServiceApi($url, self::THUMBNAIL[self::THUMBNAIL_MEDIUM]);
         $videoDataLarge = $this->getVideoDataFromServiceApi($url, self::THUMBNAIL[self::THUMBNAIL_LARGE]);
